@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvwncm8j0qrfg"]
+
+[ext_resource type="Texture2D" uid="uid://drgh882clhv2i" path="res://mystic_woods/mystic_woods/sprites/particles/dust_particles_01.png" id="1_f0eok"]
+[ext_resource type="Script" path="res://dust.gd" id="2_pjcvn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnnnv"]
+atlas = ExtResource("1_f0eok")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7431"]
+atlas = ExtResource("1_f0eok")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5fku"]
+atlas = ExtResource("1_f0eok")
+region = Rect2(24, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uggdp"]
+atlas = ExtResource("1_f0eok")
+region = Rect2(36, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fqtuv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnnnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7431")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5fku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uggdp")
+}],
+"loop": true,
+"name": &"dust",
+"speed": 1.0
+}]
+
+[node name="dust" type="AnimatedSprite2D"]
+position = Vector2(335, 220)
+scale = Vector2(6.91667, 6.75)
+sprite_frames = SubResource("SpriteFrames_fqtuv")
+animation = &"dust"
+script = ExtResource("2_pjcvn")
